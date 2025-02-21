@@ -95,4 +95,40 @@ ORDER BY 2 DESC
 4. Execute SQL queries to solve the listed problems.
 5. Explore query optimization techniques for large datasets.
 
+To improve query performance, we carried out the following optimization process:
+
+**Query Optimization Technique**
+
+> Initial Query Performance Analysis Using EXPLAIN
+
+We began by analyzing the performance of a query using the EXPLAIN function.
+The query retrieved tracks based on the artist column, and the performance metrics were as follows:
+	Execution time (E.T.): 12 ms
+	Planning time (P.T.): 0.19 ms
+
+ ```sql
+EXPLAIN ANALYZE -- ET = 12.28 ms , PT = 0.19 ms
+SELECT
+	artist,
+	track,
+	views
+FROM spotify
+WHERE artist = 'Gorillaz' 
+AND
+most_played_on = 'Youtube'
+ORDER BY stream DESC LIMIT 50;
+```
+**Index Creation on the artist Column**
+
+> To optimize the query performance, we created an index on the artist column. This ensures faster retrieval of rows where the artist is queried.
+> SQL command for creating the index:
+```sql
+CREATE INDEX idx_artist ON spotify_tracks(artist);
+```
+
+**Performance Analysis After Index Creation**
+-- After creating the index ET = 0.172 ms, PT = 0.244 ms
+
+
+
 
