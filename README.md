@@ -3,7 +3,7 @@
 # Overview
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using SQL. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
 
-```
+```sql
 -- create table
 DROP TABLE IF EXISTS spotify;
 CREATE TABLE spotify (
@@ -64,7 +64,7 @@ Nested subqueries, window functions, CTEs, and performance optimization.
 2. Write a query to find tracks where the liveness score is above the average.
 3. Use a WITH clause to calculate the difference between the highest and lowest energy values for tracks in each album.
 
-```
+```sql
 WITH cte
 AS
 (SELECT 
