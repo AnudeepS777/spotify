@@ -1,6 +1,9 @@
 
 [Advanced SQL project Spotify.docx](https://github.com/user-attachments/files/18907882/Advanced.SQL.project.Spotify.docx)
 
+# SQL Text File
+[Uploading spotify.sql…]
+
 # Spotify Advanced SQL Project
 
 # Overview
